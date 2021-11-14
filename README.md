@@ -2,7 +2,7 @@
 
 ## The Purpose
 
-Setup a big data env quickly, easy for beginner, current support:
+Use the Wheel to set up a big data env quickly, easy for beginner, current support:
 
 - Hadoop(3.2.1)
     - namenode
@@ -11,14 +11,6 @@ Setup a big data env quickly, easy for beginner, current support:
     - nodemanager
     - historyserver
 
-- Hive(3.1.2) based on Hadoop 3.2.1
-    - hive-server
-    - hive-metastore
-    - hive-metastore-postgresql
-
-- Spark(3.1.2)
-    - spark-client
-
 ## Prerequisite
 
 - docker
@@ -26,16 +18,16 @@ Setup a big data env quickly, easy for beginner, current support:
 
 ## User Guide
 
-### Setup
+### Hadoop
+
+#### Setup
 
 ```bash
-cd docker-big-data
+cd hadoop
 docker compose up -d
 ```
 
-### Web entry
+#### Web entry
 
 - hadoop: http://localhost:9870
 - yarn: http://localhost:8088
-
-## Developer Guide
