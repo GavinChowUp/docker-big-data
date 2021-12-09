@@ -15,8 +15,14 @@ Use the Wheel to set up a big data env quickly, easy for beginner, current suppo
 
 - docker
 - docker-compose
+- create docker network(`import`)
+  - docker network create hadoop_net
 
 ## User Guide
+
+### network
+
+所有container 均在 `hadoop_default` 下,可使用`docker network ls` 命令查看
 
 ### Hadoop
 
@@ -31,3 +37,4 @@ docker compose up -d
 
 - hadoop: http://localhost:9870
 - yarn: http://localhost:8088
+
