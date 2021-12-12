@@ -6,10 +6,18 @@ networks:
 
 services:
   flink-1.13.3:
-    image: flink:1.13.3-scala_2.12-java8
+    image: flink:1.13.3-hadoop_3.2.1-scala_2.12-java8
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
     container_name: flink-1.13.3
-    restart: always
+    volumes:
+      - ../conf/flink/flink-conf.yaml:/opt/flink-1.13.3/conf/flink-conf.yaml
+      - ../conf/hadoop/core-site.xml:/opt/hadoop-3.2.1/etc/hadoop/core-site.xml
+      - ../conf/hadoop/hdfs-site.xml:/opt/hadoop-3.2.1/etc/hadoop/hdfs-site.xml
+      - ../conf/hadoop/yarn-site.xml:/opt/hadoop-3.2.1/etc/hadoop/yarn-site.xml
     ports:
       - "8081:8081"
+      - "5005:5005"
+      - "5006:5006"
     networks:
       - hadoop_net

@@ -2,6 +2,11 @@
 
 <configuration>
     <property>
+        <name>yarn.scheduler.minimum-allocation-mb</name>
+        <value>1024</value>
+    </property>
+
+    <property>
         <name>yarn.log-aggregation-enable</name>
         <value>true</value>
     </property>
@@ -42,7 +47,7 @@
     </property>
 
     <property>
-        <name>yarn.resourcemanager.address	</name>
+        <name>yarn.resourcemanager.address</name>
         <value>resourcemanager:8032</value>
     </property>
 

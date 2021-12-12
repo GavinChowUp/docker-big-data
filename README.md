@@ -11,18 +11,20 @@ Use the Wheel to set up a big data env quickly, easy for beginner, current suppo
     - nodemanager
     - historyserver
 
+- Flink(1.13.3 | only for Debugging Per-Job Cluster)
+
 ## Prerequisite
 
 - docker
 - docker-compose
 - create docker network(`import`)
-  - docker network create hadoop_net
+    - docker network create hadoop_net
 
 ## User Guide
 
 ### network
 
-所有container 均在 `hadoop_default` 下,可使用`docker network ls` 命令查看
+You could use `docker network ls` to find `hadoop_net` and use `docker network inspect hadoop_net` to find the contains Connected to this network
 
 ### Hadoop
 
