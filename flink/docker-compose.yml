@@ -10,6 +10,7 @@ services:
     stdin_open: true # docker run -i
     tty: true        # docker run -t
     container_name: flink-1.13.3
+    hostname: flink-1.13.3
     volumes:
       - ../conf/flink/flink-conf.yaml:/opt/flink-1.13.3/conf/flink-conf.yaml
       - ../conf/hadoop/core-site.xml:/opt/hadoop-3.2.1/etc/hadoop/core-site.xml

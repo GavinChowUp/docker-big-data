@@ -270,11 +270,6 @@ jobmanager.execution.failover-strategy: region
 # Interval in milliseconds for refreshing the monitored directories.
 #historyserver.archive.fs.refresh-interval: 10000
 
-# jobmanager debug端口
-env.java.opts.jobmanager: -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005
-
-# taskmanager debug端口
-env.java.opts.taskmanager: -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5006
 
 # 设置超时 时间 . 单位 毫秒.
 rest.connection-timeout: 360000000
